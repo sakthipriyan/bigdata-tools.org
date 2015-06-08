@@ -1,5 +1,6 @@
 # Apache Spark
-**contributed by** [Sakthi Priyan H](http://sakthipriyan.com)
+*Contributed by* [Sakthi Priyan H](http://sakthipriyan.com).  
+*Last update* on 8, Jun 2015
 
 ### Description
 Apache Spark is a fast and general engine for large-scale data processing.
