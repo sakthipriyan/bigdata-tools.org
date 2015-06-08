@@ -1,12 +1,13 @@
 # Apache Spark
+
 ### Description
 Apache Spark is a fast and general engine for large-scale data processing.
 
 ### Project Details
-* [Website](https://spark.apache.org/)
-*  [Wikipedia](http://en.wikipedia.org/wiki/Apache_Spark)
-* [Source Code](https://github.com/apache/spark)
-* [License](https://github.com/apache/spark/blob/master/LICENSE) Apache License Version 2.0 + more
+* Website: [https://spark.apache.org/](https://spark.apache.org/)
+* Wikipedia: [http://en.wikipedia.org/wiki/Apache_Spark](http://en.wikipedia.org/wiki/Apache_Spark)
+* Source Code: [https://github.com/apache/spark](https://github.com/apache/spark)
+* License: Apache License Version 2.0 + [more](https://github.com/apache/spark/blob/master/LICENSE)
 
 ### Project Status
 * Highly Active
@@ -14,6 +15,4 @@ Apache Spark is a fast and general engine for large-scale data processing.
 
 ### Related
 * [Apache Hadoop](../apache-hadoop)
-
-### Tags
-* Data Processing
+* [Data Processing](../data-processing)
