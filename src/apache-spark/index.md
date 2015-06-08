@@ -13,7 +13,7 @@ Apache Spark is a fast and general engine for large-scale data processing.
 * Latest version **v1.3.1** released on **April 17, 2015**
 
 ### Related
-* [Apache Hadoop](apache-hadoop)
+* [Apache Hadoop](../apache-hadoop)
 
 ### Tags
 * Data Processing
