@@ -9,11 +9,12 @@ Also, you can provide more relevant and
 
 ### How to Contribute articles?
 1. Fork this project `git clone git@github.com:sakthipriyan/bigdata-tools.org.git`
-2. Add markdown for new tools and technology in src/ folder.
+2. Add markdown for new tools and technology in src/ folder.  
+   File Name
 
-
-        File Name
         apache-spark.md
+
+   File Content
 
         # Apache Spark
         ### is a fast and general engine for large-scale data processing.
