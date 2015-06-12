@@ -138,11 +138,12 @@ a img:focus {
   -moz-background-size: cover;
   background-size: cover;
   -o-background-size: cover;
+  padding: 100px 0 50px;
 }
 .intro-header .site-heading,
 .intro-header .post-heading,
 .intro-header .page-heading {
-  padding: 100px 0 50px;
+
   color: white;
 }
 
