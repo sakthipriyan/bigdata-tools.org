@@ -23,7 +23,7 @@ Also, you can provide more relevant and
         
 
 3. If updating existing file, update the date as well.
-4. Add your name to Contributors list, link it to your website or social media account.
+4. Add your name to Contributors list, link it to your website/github/social media.
 
 ### Contributors *(in alphabetic order)*
 * [Sakthi Priyan H](http://sakthipriyan.com)
