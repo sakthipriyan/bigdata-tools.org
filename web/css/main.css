@@ -1,8 +1,6 @@
-/*!
- * Clean Blog v1.0.0 (http://startbootstrap.com)
- * Copyright 2014 Start Bootstrap
- * Licensed under Apache 2.0 (https://github.com/IronSummitMedia/startbootstrap/blob/gh-pages/LICENSE)
- */
+pre {
+  background: #f8f8f8;
+}
 
 body {
   font-size: 18px;
@@ -255,9 +253,7 @@ a img:focus {
   border-bottom-right-radius: 5px;
   border-bottom-left-radius: 5px;
 }
-footer {
-  padding: 50px 0 65px;
-}
+
 footer .list-inline {
   margin: 0;
   padding: 0;
@@ -265,7 +261,7 @@ footer .list-inline {
 footer .copyright {
   font-size: 14px;
   text-align: center;
-  margin-bottom: 0;
+
 }
 .floating-label-form-group {
   font-size: 14px;
