@@ -1,4 +1,4 @@
-import logging, sys, os, shutil, re
+import logging, sys, os, shutil, re, markdown
 
 logger = logging.getLogger(__name__)
 SRC = 'src'
@@ -27,10 +27,12 @@ def process_src(src, dist):
 			os.makedirs(out_path)
 
 def process_md(src, dist):
+	logger.debug('Processing File %s' % src)
 	with open(src) as md_file:
 		content = md_file.readlines()
-		if(len(content) > 0):
+		if(len(content) < 4):
 			logger.warn('File %s contains less than 4 lines, skipping' % src)
+			return
 		html_content = get_html(content)
 		write_file(dist,html_content)
 
@@ -44,10 +46,14 @@ def write_file(filename, content):
 def get_html(content):
 	title = re.sub('^#','',content[0].strip())
 	sub_title = re.sub('^##','',content[1].strip())
-	img_md = content[2]
-	img_url = img_md[img_md.index('(')+1, img_md.rindex(')')]
-	md = ''.join(content[3:])
-	return markdown.markdown(md)
+	img_url = get_img_url(content[2])
+	return markdown.markdown(''.join(content[3:]))
+
+def get_img_url(img_md):
+	if len(img_md.strip()) == 0:
+		return None
+	else:
+		return img_md[img_md.index('(')+1:img_md.rindex(')')]
 
 def main():
 	logging.basicConfig(level=logging.DEBUG,format='%(asctime)-15s %(levelname)-5s %(name)-8s %(message)s')
