@@ -8,4 +8,4 @@ This will be the super cool website ever created for Bigdata Tools.
 Hold on, more content will be added over time.
 
 ### Upcoming preview
-* [Apache Spark](/apache-spark)
+* [Apache Spark](apache-spark)
