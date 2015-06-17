@@ -1,3 +1,4 @@
+from jinja2 import Environment, FileSystemLoader
 import logging, sys, os, shutil, re, markdown
 
 logger = logging.getLogger(__name__)
@@ -47,13 +48,19 @@ def get_html(content):
 	title = re.sub('^#','',content[0].strip())
 	sub_title = re.sub('^##','',content[1].strip())
 	img_url = get_img_url(content[2])
-	return markdown.markdown(''.join(content[3:]))
+	main_content = markdown.markdown(''.join(content[3:]))
+	template = get_template()
+	html = template.render(title=title, sub_title=sub_title, img_url=img_url, main_content=main_content)
+	return html
 
 def get_img_url(img_md):
-	if len(img_md.strip()) == 0:
-		return None
+	start = img_md.find('(')
+	end = img_md.rfind(')')
+	if (start > 0 and end > start):
+		return img_md[start+1:end]
 	else:
-		return img_md[img_md.index('(')+1:img_md.rindex(')')]
+		return None
+
 
 def main():
 	logging.basicConfig(level=logging.DEBUG,format='%(asctime)-15s %(levelname)-5s %(name)-8s %(message)s')
@@ -62,6 +69,11 @@ def main():
 	logger.info('Generating website in ' + dist +' from source ' + src)
 	copy_resources(os.getcwd(), dist)
 	process_src(src, dist)
+
+def get_template():
+	web = os.path.join(os.getcwd(),'web','html')
+	env = Environment(loader=FileSystemLoader(web))
+	return env.get_template('default.html')
 
 if __name__ == '__main__' :
 	main()

@@ -1,19 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="">
 <meta name="author" content="">
-
-<title>Bigdata Tools - About</title>
-<link href="../css/bootstrap.min.css" rel="stylesheet">
-<link href="../css/highlight-github.min.css" rel="stylesheet">
-<link href="../css/font-awesome.min.css" rel="stylesheet">
-<link href="../css/main.css" rel="stylesheet">
+<title>{{title}} - bigdata-tools.org</title>
+<link href="/css/bootstrap.min.css" rel="stylesheet">
+<link href="/css/highlight-github.min.css" rel="stylesheet">
+<link href="/css/font-awesome.min.css" rel="stylesheet">
+<link href="/css/main.css" rel="stylesheet">
 
 <!-- Custom Fonts -->
 <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
@@ -72,13 +69,15 @@
       <div class="row">
         <div class="col-lg-2 col-md-2">
           <div class="page-heading">
-            <img class="img-thumbnail" src="http://photos1.meetupstatic.com/photos/event/1/0/4/c/global_432904172.jpeg" />
+            {% if img_url is not none %}
+            <img class="img-thumbnail" src="{{img_url}}" />
+            {% endif %}
           </div>
         </div>
         <div class="col-lg-8 col-md-8">
           <div class="page-heading">
-            <h1>Apache Spark</h1>
-            <span class="subheading">is a fast and general engine for large-scale data processing.</span>
+            <h1>{{title}}</h1>
+            <span class="subheading">{{sub_title}}</span>
           </div>
         </div>
       </div>
@@ -88,54 +87,8 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-        <article class="markdown-body entry-content" itemprop="mainContentOfPage">
-          <p>
-            <em>Last updated</em> on 8, Jun 2015</p>
-
-          <h3>
-            <a id="user-content-description" class="anchor" href="#description" aria-hidden="true">
-              <span class="octicon octicon-link"></span>
-            </a>Description</h3>
-
-          <p>Apache Spark is a fast and general engine for large-scale data processing.</p>
-
-          <h3>
-            <a id="user-content-details" class="anchor" href="#details" aria-hidden="true">
-              <span class="octicon octicon-link"></span>
-            </a>Details</h3>
-
-          <ul>
-            <li><a href="https://spark.apache.org/">Website</a></li>
-            <li><a href="http://en.wikipedia.org/wiki/Apache_Spark">Wikipedia</a></li>
-            <li><a href="https://github.com/apache/spark">Source Code</a></li>
-            <li>License: Apache License Version 2.0 + <a href="https://github.com/apache/spark/blob/master/LICENSE">more</a></li>
-          </ul>
-
-          <h3>
-            <a id="user-content-status" class="anchor" href="#status" aria-hidden="true">
-              <span class="octicon octicon-link"></span>
-            </a>Status</h3>
-
-          <ul>
-            <li>Highly Active</li>
-            <li>Latest version
-              <strong>v1.3.1</strong> released on
-              <strong>April 17, 2015</strong>
-            </li>
-          </ul>
-
-          <h3>
-            <a id="user-content-related" class="anchor" href="#related" aria-hidden="true">
-              <span class="octicon octicon-link"></span>
-            </a>Related</h3>
-
-          <ul>
-            <li><a href="/sakthipriyan/bigdata-tools.org/blob/master/src/data-processing">Data Processing</a></li>
-            <li><a href="/sakthipriyan/bigdata-tools.org/blob/master/src/apache-hadoop">Apache Hadoop</a></li>
-          </ul>
-          <div>
-            <pre><code>System.out.println("Testing")</code></pre>
-          </div>
+        <article>
+            {{main_content}}
         </article>
         <hr/>
         <ul class="list-inline text-center">
@@ -171,7 +124,7 @@
         <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
           <ul class="list-inline text-center">
             <li>
-            Follow us on
+            Follow on
             </li>
             <li>
               <a href="https://github.com/sakthipriyan/bigdata-tools.org">
