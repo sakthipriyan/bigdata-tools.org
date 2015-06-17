@@ -1,5 +1,11 @@
 # Bigdata Tools
-## Collection of Big data Tools
-![Alt text](/path/to/img.jpg)
+## to explore, identify, evaluate & use big data tools.
 
-This is the super cool website ever created for Bigdata Tools.
+### Not yet ready
+This will be the super cool website ever created for Bigdata Tools.
+
+### Work in progress
+Hold on, more content will be added over time.
+
+### Upcoming preview
+* [Apache Spark](/apache-spark)

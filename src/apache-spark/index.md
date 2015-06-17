@@ -1,5 +1,6 @@
 # Apache Spark
-*Contributed by* [Sakthi Priyan H](http://sakthipriyan.com).  
+## is a fast and general engine for large-scale data processing.
+![Logo](http://photos1.meetupstatic.com/photos/event/1/0/4/c/global_432904172.jpeg)
 *Last update* on 8, Jun 2015
 
 ### Description
